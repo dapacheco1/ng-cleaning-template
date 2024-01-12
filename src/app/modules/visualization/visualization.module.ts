@@ -9,6 +9,8 @@ import { IntroductionComponent } from './components/introduction/introduction.co
 import { AboutUsComponent } from './components/about-us/about-us.component';
 import { GuaranteesComponent } from './components/guarantees/guarantees.component';
 import { OurServicesComponent } from './components/our-services/our-services.component';
+import { ServiceGuaranteesComponent } from './components/service-guarantees/service-guarantees.component';
+import { ReviewsComponent } from './components/reviews/reviews.component';
 
 @NgModule({
   declarations: [
@@ -17,7 +19,9 @@ import { OurServicesComponent } from './components/our-services/our-services.com
     IntroductionComponent,
     AboutUsComponent,
     GuaranteesComponent,
-    OurServicesComponent
+    OurServicesComponent,
+    ServiceGuaranteesComponent,
+    ReviewsComponent
   ],
   imports: [
     CommonModule,
