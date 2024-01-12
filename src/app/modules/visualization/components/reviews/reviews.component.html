@@ -15,11 +15,11 @@
     <div class="w-full flex flex-row gap-3 overflow-x-scroll overflow-y-hidden" style="scroll-snap-type: x mandatory;">
         <ng-container *ngFor="let item of data">
             <div class="w-full h-44 bg-white rounded-md flex flex-col gap-3 snap-center p-3" style="flex: 0 0 310px">
-                <p class="max-h-28 overflow-hidden custom-ellipsis text-black-text text-sm">{{item.comment}}</p>
+                <p class="max-h-28 overflow-hidden custom-ellipsis text-black-text text-md">{{item.comment}}</p>
                 <div class="flex flex-row gap-3">
                     <div class="flex flex-col">
-                        <p class="text-sm font-medium">{{item.name}}</p>
-                        <p class="text-xs text-gray-300 font-medium">{{item.date}}</p>
+                        <p class="text-md font-medium">{{item.name}}</p>
+                        <p class="text-md text-gray-300 font-medium">{{item.date}}</p>
                         <div class="flex flex-row gap-3 justify-center">
                             <ng-container *ngFor="let num of [].constructor(item.rate)">
                                 <i class='bx bxs-star text-amber-400' ></i>

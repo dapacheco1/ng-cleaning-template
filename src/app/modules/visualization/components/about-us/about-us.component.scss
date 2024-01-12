@@ -1,0 +1,9 @@
+.effect:active{
+    scale: 1.1;
+    transition: all 700ms ease-in-out;
+}
+
+.effect{
+    scale: 1;
+    transition: all 700ms ease-in-out;
+}
