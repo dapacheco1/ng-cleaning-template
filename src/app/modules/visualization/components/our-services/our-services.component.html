@@ -1,0 +1,783 @@
+<div class="mt-4 w-full flex flex-col items-center gap-4">
+    <!-- regular cleaning -->
+    <section class="w-[70%] h-auto bg-white p-2 rounded-md flex flex-col gap-3 justify-center items-center mb-2 relative">
+        <div class="w-full h-32">
+            <img class="w-full h-full object-cover object-top" src="../../../../../assets/bedroom-1872196_1280.jpg" alt="bedroom">
+        </div>
+        <p class="w-full text-center font-bold text-primary">Regular cleaning</p>
+        <button 
+        *ngIf="!regularInfo"
+        class="bg-primary p-2 w-full text-white font-medium rounded-md text-sm" (click)="revealMoreInformation('regular')">Learn More</button>
+        <ng-container *ngIf="regularInfo">
+            <div class="flex flex-col w-full h-auto">
+                <div class="flex flex-row gap-3">
+                    <p class="text-xs self-start font-semibold my-2">General Cleaning</p>
+                </div>
+                <div class="flex flex-row gap-3">
+                    <i class='bx bx-check text-primary'></i>
+                    <p class="text-xs">Clean all rooms.</p>
+                </div>
+                <div class="flex flex-row gap-3">
+                    <i class='bx bx-check text-primary'></i>
+                    <p class="text-xs">Dusting.</p>
+                </div>
+                <div class="flex flex-row gap-3">
+                    <i class='bx bx-check text-primary'></i>
+                    <p class="text-xs">Bed Made.</p>
+                </div>
+                <div class="flex flex-row gap-3">
+                    <i class='bx bx-check text-primary'></i>
+                    <p class="text-xs">Remove Trash.</p>
+                </div>
+                <div class="flex flex-row gap-3">
+                    <i class='bx bx-check text-primary'></i>
+                    <p class="text-xs">Clean windowsills.</p>
+                </div>
+                <div class="flex flex-row gap-3">
+                    <i class='bx bx-check text-primary'></i>
+                    <p class="text-xs">Mirrors cleaning.</p>
+                </div>
+                <div class="flex flex-row gap-3">
+                    <i class='bx bx-check text-primary'></i>
+                    <p class="text-xs">Clean microwave.</p>
+                </div>
+                <div class="flex flex-row gap-3">
+                    <i class='bx bx-check text-primary'></i>
+                    <p class="text-xs">Clean stove.</p>
+                </div>
+                <div class="flex flex-row gap-3">
+                    <i class='bx bx-check text-primary'></i>
+                    <p class="text-xs">Bathtub.</p>
+                </div>
+                <div class="flex flex-row gap-3">
+                    <i class='bx bx-check text-primary'></i>
+                    <p class="text-xs">Washed bathroom glass.</p>
+                </div>
+                <div class="flex flex-row gap-3">
+                    <i class='bx bx-check text-primary'></i>
+                    <p class="text-xs">Floor and Carpet Care</p>
+                </div>
+                <div class="flex flex-row gap-3">
+                    <i class='bx bx-check text-primary'></i>
+                    <p class="text-xs">Vacuum carpets, rugs and floor.</p>
+                </div>
+                <div class="flex flex-row gap-3">
+                    <i class='bx bx-check text-primary'></i>
+                    <p class="text-xs">Mop all floor types.</p>
+                </div>
+                <div class="flex flex-row gap-3 my-2">
+                    <p class="text-xs font-semibold">Stainless Steel Maintenance</p>
+                </div>
+                <div class="flex flex-row gap-3 mb-6">
+                    <i class='bx bx-check text-primary'></i>
+                    <p class="text-xs">Condition stainless steel.</p>
+                </div>
+            </div>
+            <button class="absolute w-10 h-10 p-3 bg-white shadow-md rounded-full" style="bottom: -18px;" (click)="hideInformation('regular')">
+                <i class='bx bx-chevron-up'></i>
+            </button>
+        </ng-container>
+    </section>
+    <!-- deep cleaning -->
+    <section class="w-[70%] h-auto bg-white p-2 rounded-md flex flex-col gap-3 justify-center items-center mb-2 relative">
+        <div class="w-full h-32">
+            <img class="w-full h-full object-cover object-top" src="../../../../../assets/kitchen-1940174_1280.jpg" alt="kitchen">
+        </div>
+        <p class="w-full text-center font-bold text-primary">Deep Cleaning</p>
+        <button 
+        *ngIf="!deepInfo"
+        class="bg-primary p-2 w-full text-white font-medium rounded-md text-sm" (click)="revealMoreInformation('deep')">Learn More</button>
+        <ng-container *ngIf="deepInfo">
+            <div class="flex flex-col w-full h-auto">
+                <div class="flex flex-row gap-3">
+                    <p class="text-xs self-start font-semibold my-2">General Cleaning</p>
+                </div>
+                <div class="flex flex-row gap-3">
+                    <i class='bx bx-check text-primary'></i>
+                    <p class="text-xs self-start">Detailed clean all rooms.</p>
+                </div>
+                <div class="flex flex-row gap-3">
+                    <i class='bx bx-check text-primary'></i>
+                    <p class="text-xs self-start">Dusting.</p>
+                </div>
+                <div class="flex flex-row gap-3">
+                    <i class='bx bx-check text-primary'></i>
+                    <p class="text-xs self-start">Bed made.</p>
+                </div>
+                <div class="flex flex-row gap-3">
+                    <i class='bx bx-check text-primary'></i>
+                    <p class="text-xs self-start">Mirrors Cleaning.</p>
+                </div>
+                <div class="flex flex-row gap-3">
+                    <i class='bx bx-check text-primary'></i>
+                    <p class="text-xs self-start">Move all Furniture.</p>
+                </div>
+                <div class="flex flex-row gap-3">
+                    <i class='bx bx-check text-primary'></i>
+                    <p class="text-xs self-start">Clean blinds.</p>
+                </div>
+                <div class="flex flex-row gap-3">
+                    <i class='bx bx-check text-primary'></i>
+                    <p class="text-xs self-start">Clean air conditioning vents.</p>
+                </div>
+                <div class="flex flex-row gap-3">
+                    <i class='bx bx-check text-primary'></i>
+                    <p class="text-xs self-start">Clean baseboards.</p>
+                </div>
+                <div class="flex flex-row gap-3">
+                    <i class='bx bx-check text-primary'></i>
+                    <p class="text-xs self-start">Clean ceiling fans.</p>
+                </div>
+                <div class="flex flex-row gap-3">
+                    <p class="text-xs self-start font-semibold my-2">Upholstery and Glass:</p>
+                </div>
+                <div class="flex flex-row gap-3">
+                    <i class='bx bx-check text-primary'></i>
+                    <p class="text-xs self-start">Vacuuming upholstery.</p>
+                </div>
+                <div class="flex flex-row gap-3">
+                    <i class='bx bx-check text-primary'></i>
+                    <p class="text-xs self-start">Wash glass doors.</p>
+                </div>
+                <div class="flex flex-row gap-3">
+                    <p class="text-xs self-start font-semibold my-2">Kitchen:</p>
+                </div>
+                <div class="flex flex-row gap-3">
+                    <i class='bx bx-check text-primary'></i>
+                    <p class="text-xs self-start">Clean inside refrigerator.</p>
+                </div>
+                <div class="flex flex-row gap-3">
+                    <i class='bx bx-check text-primary'></i>
+                    <p class="text-xs self-start">Clean microwave.</p>
+                </div>
+                <div class="flex flex-row gap-3">
+                    <i class='bx bx-check text-primary'></i>
+                    <p class="text-xs self-start">Clean stove.</p>
+                </div>
+                <div class="flex flex-row gap-3">
+                    <i class='bx bx-check text-primary'></i>
+                    <p class="text-xs self-start">Clean inside oven.</p>
+                </div>
+                <div class="flex flex-row gap-3">
+                    <p class="text-xs self-start font-semibold my-2">Bathroom:</p>
+                </div>
+                <div class="flex flex-row gap-3">
+                    <i class='bx bx-check text-primary'></i>
+                    <p class="text-xs self-start">Bathtub.</p>
+                </div>
+                <div class="flex flex-row gap-3">
+                    <i class='bx bx-check text-primary'></i>
+                    <p class="text-xs self-start">Shower scrubbed.</p>
+                </div>
+                <div class="flex flex-row gap-3">
+                    <i class='bx bx-check text-primary'></i>
+                    <p class="text-xs self-start">Washed Bathroom Glass.</p>
+                </div>
+                <div class="flex flex-row gap-3">
+                    <p class="text-xs self-start font-semibold my-2">Outdoor:</p>
+                </div>
+                <div class="flex flex-row gap-3">
+                    <i class='bx bx-check text-primary'></i>
+                    <p class="text-xs self-start">Lanai cleaning.</p>
+                </div>
+                <div class="flex flex-row gap-3">
+                    <p class="text-xs self-start font-semibold my-2">Furniture Care:</p>
+                </div>
+                <div class="flex flex-row gap-3">
+                    <i class='bx bx-check text-primary'></i>
+                    <p class="text-xs self-start">Condition stainless steel/wood furniture.</p>
+                </div>
+                <div class="flex flex-row gap-3">
+                    <p class="text-xs self-start font-semibold my-2">Floor Care:</p>
+                </div>
+                <div class="flex flex-row gap-3">
+                    <i class='bx bx-check text-primary'></i>
+                    <p class="text-xs self-start">Vacuum carpets, rugs and floor.</p>
+                </div>
+                <div class="flex flex-row gap-3">
+                    <i class='bx bx-check text-primary'></i>
+                    <p class="text-xs self-start">Mop all floor types.</p>
+                </div>
+                <div class="flex flex-row gap-3">
+                    <p class="text-xs self-start font-semibold my-2">Waste Management:</p>
+                </div>
+                <div class="flex flex-row gap-3 mb-6">
+                    <i class='bx bx-check text-primary'></i>
+                    <p class="text-xs self-start">Remove Trash.</p>
+                </div>
+            </div>
+            <button class="absolute w-10 h-10 p-3 bg-white shadow-md rounded-full" style="bottom: -18px;" (click)="hideInformation('deep')">
+                <i class='bx bx-chevron-up'></i>
+            </button>
+        </ng-container>
+    </section>
+    <!-- move in/out -->
+    <section class="w-[70%] h-auto bg-white p-2 rounded-md flex flex-col gap-3 justify-center items-center mb-2 relative">
+        <div class="w-full h-32">
+            <img class="w-full h-full object-cover object-top" src="../../../../../assets/moveinout.jpg" alt="move in/out">
+        </div>
+        <p class="w-full text-center font-bold text-primary">Move In/Out</p>
+        <button 
+        *ngIf="!moveInfo"
+        class="bg-primary p-2 w-full text-white font-medium rounded-md text-sm" (click)="revealMoreInformation('move')">Learn More</button>
+        <ng-container *ngIf="moveInfo">
+            <div class="flex flex-col w-full h-auto">
+                <div class="flex flex-row gap-3">
+                    <p class="text-xs self-start font-semibold my-2">Housekeeping Department:</p>
+                </div>
+                <div class="flex flex-row gap-3">
+                    <i class='bx bx-check text-primary'></i>
+                    <p class="text-xs self-start">Detailed clean all rooms.</p>
+                </div>
+                <div class="flex flex-row gap-3">
+                    <i class='bx bx-check text-primary'></i>
+                    <p class="text-xs self-start">Dusting.</p>
+                </div>
+                <div class="flex flex-row gap-3">
+                    <i class='bx bx-check text-primary'></i>
+                    <p class="text-xs self-start">Bed made.</p>
+                </div>
+                <div class="flex flex-row gap-3">
+                    <i class='bx bx-check text-primary'></i>
+                    <p class="text-xs self-start">Mirrors Cleaning.</p>
+                </div>
+                <div class="flex flex-row gap-3">
+                    <i class='bx bx-check text-primary'></i>
+                    <p class="text-xs self-start">Move all Furniture.</p>
+                </div>
+                <div class="flex flex-row gap-3">
+                    <i class='bx bx-check text-primary'></i>
+                    <p class="text-xs self-start">Clean blinds.</p>
+                </div>
+                <div class="flex flex-row gap-3">
+                    <i class='bx bx-check text-primary'></i>
+                    <p class="text-xs self-start">Clean air conditioning vents.</p>
+                </div>
+                <div class="flex flex-row gap-3">
+                    <i class='bx bx-check text-primary'></i>
+                    <p class="text-xs self-start">Clean baseboards.</p>
+                </div>
+                <div class="flex flex-row gap-3">
+                    <i class='bx bx-check text-primary'></i>
+                    <p class="text-xs self-start">Clean ceiling fans.</p>
+                </div>
+                <div class="flex flex-row gap-3">
+                    <p class="text-xs self-start font-semibold my-2">Upholstery and Glass:</p>
+                </div>
+                <div class="flex flex-row gap-3">
+                    <i class='bx bx-check text-primary'></i>
+                    <p class="text-xs self-start">Vacuuming upholstery.</p>
+                </div>
+                <div class="flex flex-row gap-3">
+                    <i class='bx bx-check text-primary'></i>
+                    <p class="text-xs self-start">Wash glass doors.</p>
+                </div>
+                <div class="flex flex-row gap-3">
+                    <p class="text-xs self-start font-semibold my-2">Kitchen:</p>
+                </div>
+                <div class="flex flex-row gap-3">
+                    <i class='bx bx-check text-primary'></i>
+                    <p class="text-xs self-start">Clean inside refrigerator.</p>
+                </div>
+                <div class="flex flex-row gap-3">
+                    <i class='bx bx-check text-primary'></i>
+                    <p class="text-xs self-start">Clean microwave.</p>
+                </div>
+                <div class="flex flex-row gap-3">
+                    <i class='bx bx-check text-primary'></i>
+                    <p class="text-xs self-start">Clean stove.</p>
+                </div>
+                <div class="flex flex-row gap-3">
+                    <i class='bx bx-check text-primary'></i>
+                    <p class="text-xs self-start">Clean inside oven.</p>
+                </div>
+                <div class="flex flex-row gap-3">
+                    <p class="text-xs self-start font-semibold my-2">Bathroom:</p>
+                </div>
+                <div class="flex flex-row gap-3">
+                    <i class='bx bx-check text-primary'></i>
+                    <p class="text-xs self-start">Bathtub.</p>
+                </div>
+                <div class="flex flex-row gap-3">
+                    <i class='bx bx-check text-primary'></i>
+                    <p class="text-xs self-start">Shower scrubbed.</p>
+                </div>
+                <div class="flex flex-row gap-3">
+                    <i class='bx bx-check text-primary'></i>
+                    <p class="text-xs self-start">Washed Bathroom Glass.</p>
+                </div>
+                <div class="flex flex-row gap-3">
+                    <p class="text-xs self-start font-semibold my-2">Outdoor:</p>
+                </div>
+                <div class="flex flex-row gap-3">
+                    <i class='bx bx-check text-primary'></i>
+                    <p class="text-xs self-start">Lanai cleaning.</p>
+                </div>
+                <div class="flex flex-row gap-3">
+                    <p class="text-xs self-start font-semibold my-2">Furniture Care:</p>
+                </div>
+                <div class="flex flex-row gap-3">
+                    <i class='bx bx-check text-primary'></i>
+                    <p class="text-xs self-start">Condition stainless steel/wood furniture.</p>
+                </div>
+                <div class="flex flex-row gap-3">
+                    <p class="text-xs self-start font-semibold my-2">Floor Care:</p>
+                </div>
+                <div class="flex flex-row gap-3">
+                    <i class='bx bx-check text-primary'></i>
+                    <p class="text-xs self-start">Vacuum carpets, rugs and floor.</p>
+                </div>
+                <div class="flex flex-row gap-3">
+                    <i class='bx bx-check text-primary'></i>
+                    <p class="text-xs self-start">Mop all floor types.</p>
+                </div>
+                <div class="flex flex-row gap-3">
+                    <p class="text-xs self-start font-semibold my-2">Waste Management:</p>
+                </div>
+                <div class="flex flex-row gap-3 mb-6">
+                    <i class='bx bx-check text-primary'></i>
+                    <p class="text-xs self-start">Remove Trash.</p>
+                </div>
+            </div>
+            <button class="absolute w-10 h-10 p-3 bg-white shadow-md rounded-full" style="bottom: -18px;" (click)="hideInformation('move')">
+                <i class='bx bx-chevron-up'></i>
+            </button>
+        </ng-container>
+    </section>
+    <!-- vacation home -->
+    <section class="w-[70%] h-auto bg-white p-2 rounded-md flex flex-col gap-3 justify-center items-center mb-2 relative">
+        <div class="w-full h-32">
+            <img class="w-full h-full object-cover object-center" src="../../../../../assets/vacation-home.jpg" alt="vacation home">
+        </div>
+        <p class="w-full text-center font-bold text-primary">Vacation Home</p>
+        <button 
+        *ngIf="!vacationInfo"
+        class="bg-primary p-2 w-full text-white font-medium rounded-md text-sm" (click)="revealMoreInformation('vacation')">Learn More</button>
+        <ng-container *ngIf="vacationInfo">
+            <div class="flex flex-col w-full h-auto">
+                <div class="flex flex-row gap-3">
+                    <p class="text-xs self-start font-semibold my-2">Kitchen:</p>
+                </div>
+                <div class="flex flex-row gap-3">
+                    <i class='bx bx-check text-primary'></i>
+                    <p class="text-xs self-start">Refrigerator (Inside/Outside/Top). </p>
+                </div>
+                <div class="flex flex-row gap-3">
+                    <i class='bx bx-check text-primary'></i>
+                    <p class="text-xs self-start">All food items removed and disposed of.</p>
+                </div>
+                <div class="flex flex-row gap-3">
+                    <i class='bx bx-check text-primary'></i>
+                    <p class="text-xs self-start">Stove Top..</p>
+                </div>
+                <div class="flex flex-row gap-3">
+                    <i class='bx bx-check text-primary'></i>
+                    <p class="text-xs self-start">Oven.</p>
+                </div>
+                <div class="flex flex-row gap-3">
+                    <i class='bx bx-check text-primary'></i>
+                    <p class="text-xs self-start">Microwave (Inside/Outside).</p>
+                </div>
+                <div class="flex flex-row gap-3">
+                    <i class='bx bx-check text-primary'></i>
+                    <p class="text-xs self-start">Dishwasher (Empty and wiped Down).</p>
+                </div>
+                <div class="flex flex-row gap-3">
+                    <i class='bx bx-check text-primary'></i>
+                    <p class="text-xs self-start">Countertop Appliances.</p>
+                </div>
+                <div class="flex flex-row gap-3">
+                    <i class='bx bx-check text-primary'></i>
+                    <p class="text-xs self-start">Countertop.</p>
+                </div>
+                <div class="flex flex-row gap-3">
+                    <i class='bx bx-check text-primary'></i>
+                    <p class="text-xs self-start">Cabinet Doors & Handles.</p>
+                </div>
+                <div class="flex flex-row gap-3">
+                    <i class='bx bx-check text-primary'></i>
+                    <p class="text-xs self-start">Drawers & Handles.</p>
+                </div>
+                <div class="flex flex-row gap-3">
+                    <i class='bx bx-check text-primary'></i>
+                    <p class="text-xs self-start">Cabinet Contents Organized.</p>
+                </div>
+                <div class="flex flex-row gap-3">
+                    <i class='bx bx-check text-primary'></i>
+                    <p class="text-xs self-start">Drawer Contents Organized.</p>
+                </div>
+                <div class="flex flex-row gap-3">
+                    <i class='bx bx-check text-primary'></i>
+                    <p class="text-xs self-start">Single-portfolio.  </p>
+                </div>
+                <div class="flex flex-row gap-3">
+                    <p class="text-xs self-start font-semibold my-2">Bathroom:</p>
+                </div>
+                <div class="flex flex-row gap-3">
+                    <i class='bx bx-check text-primary'></i>
+                    <p class="text-xs self-start">Shower/Tub.</p>
+                </div>
+                <div class="flex flex-row gap-3">
+                    <i class='bx bx-check text-primary'></i>
+                    <p class="text-xs self-start">Mirror.</p>
+                </div>
+                <div class="flex flex-row gap-3">
+                    <i class='bx bx-check text-primary'></i>
+                    <p class="text-xs self-start">Vanity.</p>
+                </div>
+                <div class="flex flex-row gap-3">
+                    <i class='bx bx-check text-primary'></i>
+                    <p class="text-xs self-start">Sinks.</p>
+                </div>
+                <div class="flex flex-row gap-3">
+                    <i class='bx bx-check text-primary'></i>
+                    <p class="text-xs self-start">Toilets.</p>
+                </div>
+                <div class="flex flex-row gap-3">
+                    <i class='bx bx-check text-primary'></i>
+                    <p class="text-xs self-start">Linen Closets Organized.</p>
+                </div>
+                <div class="flex flex-row gap-3">
+                    <i class='bx bx-check text-primary'></i>
+                    <p class="text-xs self-start">Towel Rack Display.   </p>
+                </div>
+                <div class="flex flex-row gap-3">
+                    <p class="text-xs self-start font-semibold my-2">Bedrooms:</p>
+                </div>                                                              
+                <div class="flex flex-row gap-3">
+                    <i class='bx bx-check text-primary'></i>
+                    <p class="text-xs self-start">Bed Linens Washed/Dried. </p>
+                </div>
+                <div class="flex flex-row gap-3">
+                    <i class='bx bx-check text-primary'></i>
+                    <p class="text-xs self-start">Fresh Linens on Bed.</p>
+                </div>
+                <div class="flex flex-row gap-3">
+                    <i class='bx bx-check text-primary'></i>
+                    <p class="text-xs self-start">All Drawers Checked for Left Behind Items from Guests.</p>
+                </div>
+                <div class="flex flex-row gap-3">
+                    <i class='bx bx-check text-primary'></i>
+                    <p class="text-xs self-start">Blinds Dusted.</p>
+                </div>
+                <div class="flex flex-row gap-3">
+                    <i class='bx bx-check text-primary'></i>
+                    <p class="text-xs self-start">Window Sills.</p>
+                </div>
+                <div class="flex flex-row gap-3">
+                    <p class="text-xs self-start font-semibold my-2">General:</p>
+                </div>
+                <div class="flex flex-row gap-3">
+                    <i class='bx bx-check text-primary'></i>
+                    <p class="text-xs self-start">Floors -Swiffer/Vacuum/Mop.</p>
+                </div>
+                <div class="flex flex-row gap-3">
+                    <i class='bx bx-check text-primary'></i>
+                    <p class="text-xs self-start">All Ceiling Fans Dusted.</p>
+                </div>
+                <div class="flex flex-row gap-3">
+                    <i class='bx bx-check text-primary'></i>
+                    <p class="text-xs self-start">All Window Sills Dusted.</p>
+                </div>
+                <div class="flex flex-row gap-3">
+                    <i class='bx bx-check text-primary'></i>
+                    <p class="text-xs self-start">All Blinds Dusted.</p>
+                </div>
+                <div class="flex flex-row gap-3">
+                    <i class='bx bx-check text-primary'></i>
+                    <p class="text-xs self-start">Sliders Cleaned.</p>
+                </div>
+                <div class="flex flex-row gap-3">
+                    <i class='bx bx-check text-primary'></i>
+                    <p class="text-xs self-start">Dryer Vent Cleaned.</p>
+                </div>
+                <div class="flex flex-row gap-3">
+                    <i class='bx bx-check text-primary'></i>
+                    <p class="text-xs self-start">Inspection of Home for Damage and Reported to Homeowner.</p>
+                </div>
+                <div class="flex flex-row gap-3">
+                    <p class="text-xs self-start font-semibold my-2">Lanai:</p>
+                </div>
+                <div class="flex flex-row gap-3">
+                    <i class='bx bx-check text-primary'></i>
+                    <p class="text-xs self-start">Patio Furniture Arranged Neatly.</p>
+                </div>
+                <div class="flex flex-row gap-3">
+                    <i class='bx bx-check text-primary'></i>
+                    <p class="text-xs self-start">Tabletop Cleaned.</p>
+                </div>
+                <div class="flex flex-row gap-3">
+                    <i class='bx bx-check text-primary'></i>
+                    <p class="text-xs self-start">Chair Cushions Checked for Stains.</p>
+                </div>
+                <div class="flex flex-row gap-3">
+                    <i class='bx bx-check text-primary'></i>
+                    <p class="text-xs self-start">Grill Cleaned.</p>
+                </div>
+                <div class="flex flex-row gap-3 mb-6">
+                    <i class='bx bx-check text-primary'></i>
+                    <p class="text-xs self-start">Pool Toys Organized.</p>
+                </div>
+            </div>
+            <button class="absolute w-10 h-10 p-3 bg-white shadow-md rounded-full" style="bottom: -18px;" (click)="hideInformation('vacation')">
+                <i class='bx bx-chevron-up'></i>
+            </button>
+        </ng-container>
+    </section>
+    <!-- post construction -->
+    <section class="w-[70%] h-auto bg-white p-2 rounded-md flex flex-col gap-3 justify-center items-center mb-2 relative">
+        <div class="w-full h-32">
+            <img class="w-full h-full object-cover object-top" src="../../../../../assets/post-construction.jpg" alt="post construction">
+        </div>
+        <p class="w-full text-center font-bold text-primary">Post Construction</p>
+        <button 
+        *ngIf="!constructionInfo"
+        class="bg-primary p-2 w-full text-white font-medium rounded-md text-sm" (click)="revealMoreInformation('construction')">Learn More</button>
+        <ng-container *ngIf="constructionInfo">
+            <div class="flex flex-col w-full h-auto">
+                <div class="flex flex-row gap-3">
+                    <p class="text-xs self-start font-semibold my-2">Kitchen:</p>
+                </div>
+                <div class="flex flex-row gap-3">
+                    <i class='bx bx-check text-primary'></i>
+                    <p class="text-xs self-start">Cabinet fronts and inside cleaned.</p>
+                </div>
+                <div class="flex flex-row gap-3">
+                    <i class='bx bx-check text-primary'></i>
+                    <p class="text-xs self-start">Countertops and shelves dusted and/or wiped.</p>
+                </div>
+                <div class="flex flex-row gap-3">
+                    <i class='bx bx-check text-primary'></i>
+                    <p class="text-xs self-start">Sinks and backsplash washed.</p>
+                </div>
+                <div class="flex flex-row gap-3">
+                    <i class='bx bx-check text-primary'></i>
+                    <p class="text-xs self-start">Windows inside cleaned.</p>
+                </div>
+                <div class="flex flex-row gap-3">
+                    <i class='bx bx-check text-primary'></i>
+                    <p class="text-xs self-start">Appliance exteriors cleaned
+                        (stovetop, oven, range hood, fridge, microwave, dishwasher).</p>
+                </div>
+                <div class="flex flex-row gap-3">
+                    <i class='bx bx-check text-primary'></i>
+                    <p class="text-xs self-start">Small appliances wiped (microwave, toaster, coffee maker).</p>
+                </div>
+                <div class="flex flex-row gap-3">
+                    <i class='bx bx-check text-primary'></i>
+                    <p class="text-xs self-start">All surfaces dusted.</p>
+                </div>
+                <div class="flex flex-row gap-3">
+                    <i class='bx bx-check text-primary'></i>
+                    <p class="text-xs self-start">Windowsills and window tracks cleaned.</p>
+                </div>
+                <div class="flex flex-row gap-3">
+                    <i class='bx bx-check text-primary'></i>
+                    <p class="text-xs self-start">Baseboards dusted and/or wiped.</p>
+                </div>
+                <div class="flex flex-row gap-3">
+                    <i class='bx bx-check text-primary'></i>
+                    <p class="text-xs self-start">Doorknobs, doorframes and doors wiped.</p>
+                </div>
+                <div class="flex flex-row gap-3">
+                    <i class='bx bx-check text-primary'></i>
+                    <p class="text-xs self-start">Light switches wiped.</p>
+                </div>
+                <div class="flex flex-row gap-3">
+                    <i class='bx bx-check text-primary'></i>
+                    <p class="text-xs self-start">Marks on walls and baseboards cleaned.</p>
+                </div>
+                <div class="flex flex-row gap-3">
+                    <i class='bx bx-check text-primary'></i>
+                    <p class="text-xs self-start">Garbage and recycling bins emptied.</p>
+                </div>
+                <div class="flex flex-row gap-3">
+                    <i class='bx bx-check text-primary'></i>
+                    <p class="text-xs self-start">Floor vacuumed and washed.</p>
+                </div>
+                <div class="flex flex-row gap-3">
+                    <p class="text-xs self-start font-semibold my-2">Bathrooms:</p>
+                </div>
+                <div class="flex flex-row gap-3">
+                    <i class='bx bx-check text-primary'></i>
+                    <p class="text-xs self-start">Sink cleaned and sanitized.</p>
+                </div>
+                <div class="flex flex-row gap-3">
+                    <i class='bx bx-check text-primary'></i>
+                    <p class="text-xs self-start">Bathtub, shower walls and glass doors cleaned and sanitized.</p>
+                </div>
+                <div class="flex flex-row gap-3">
+                    <i class='bx bx-check text-primary'></i>
+                    <p class="text-xs self-start">Toilet cleaned and sanitized inside and out.</p>
+                </div>
+                <div class="flex flex-row gap-3">
+                    <i class='bx bx-check text-primary'></i>
+                    <p class="text-xs self-start">Mirrors cleaned.</p>
+                </div>
+                <div class="flex flex-row gap-3">
+                    <i class='bx bx-check text-primary'></i>
+                    <p class="text-xs self-start">Cabinet fronts and inside cleaned.</p>
+                </div>
+                <div class="flex flex-row gap-3">
+                    <i class='bx bx-check text-primary'></i>
+                    <p class="text-xs self-start">Countertops and shelves dusted and/or wiped.</p>
+                </div>
+                <div class="flex flex-row gap-3">
+                    <i class='bx bx-check text-primary'></i>
+                    <p class="text-xs self-start">All surfaces dusted.</p>
+                </div>
+                <div class="flex flex-row gap-3">
+                    <i class='bx bx-check text-primary'></i>
+                    <p class="text-xs self-start">Windows inside cleaned.</p>
+                </div>
+                <div class="flex flex-row gap-3">
+                    <i class='bx bx-check text-primary'></i>
+                    <p class="text-xs self-start">Windowsills and window tracks cleaned.</p>
+                </div>
+                <div class="flex flex-row gap-3">
+                    <i class='bx bx-check text-primary'></i>
+                    <p class="text-xs self-start">Baseboards dusted and/or wiped.</p>
+                </div>
+                <div class="flex flex-row gap-3">
+                    <i class='bx bx-check text-primary'></i>
+                    <p class="text-xs self-start">Doorknobs, doorframes and doors wiped.</p>
+                </div>
+                <div class="flex flex-row gap-3">
+                    <i class='bx bx-check text-primary'></i>
+                    <p class="text-xs self-start">Light switches wiped.</p>
+                </div>
+                <div class="flex flex-row gap-3">
+                    <i class='bx bx-check text-primary'></i>
+                    <p class="text-xs self-start">Garbage and recycling bins emptied.</p>
+                </div>
+                <div class="flex flex-row gap-3">
+                    <i class='bx bx-check text-primary'></i>
+                    <p class="text-xs self-start">Floor vacuumed and washed.</p>
+                </div>
+                <div class="flex flex-row gap-3">
+                    <i class='bx bx-check text-primary'></i>
+                    <p class="text-xs self-start">Marks on walls and baseboards cleaned.</p>
+                </div>
+                <div class="flex flex-row gap-3">
+                    <p class="text-xs self-start font-semibold my-2">Bedrooms:</p>
+                </div>
+                <div class="flex flex-row gap-3">
+                    <i class='bx bx-check text-primary'></i>
+                    <p class="text-xs self-start">All surfaces dusted.</p>
+                </div>
+                <div class="flex flex-row gap-3">
+                    <i class='bx bx-check text-primary'></i>
+                    <p class="text-xs self-start">Carpet and area rugs vacuumed.</p>
+                </div>
+                <div class="flex flex-row gap-3">
+                    <i class='bx bx-check text-primary'></i>
+                    <p class="text-xs self-start">Hard surface floors vacuumed and damp-mopped.</p>
+                </div>
+                <div class="flex flex-row gap-3">
+                    <i class='bx bx-check text-primary'></i>
+                    <p class="text-xs self-start">Closet fronts and insides cleaned.</p>
+                </div>
+                <div class="flex flex-row gap-3">
+                    <i class='bx bx-check text-primary'></i>
+                    <p class="text-xs self-start">Marks on walls and baseboards cleaned.</p>
+                </div>
+                <div class="flex flex-row gap-3">
+                    <i class='bx bx-check text-primary'></i>
+                    <p class="text-xs self-start">Mirrors cleaned.</p>
+                </div>
+                <div class="flex flex-row gap-3">
+                    <i class='bx bx-check text-primary'></i>
+                    <p class="text-xs self-start">Windowsills and window tracks cleaned.</p>
+                </div>
+                <div class="flex flex-row gap-3">
+                    <i class='bx bx-check text-primary'></i>
+                    <p class="text-xs self-start">Baseboards dusted and/or wiped.</p>
+                </div>
+                <div class="flex flex-row gap-3">
+                    <i class='bx bx-check text-primary'></i>
+                    <p class="text-xs self-start">Doorknobs, doorframes and doors wiped.</p>
+                </div>
+                <div class="flex flex-row gap-3">
+                    <i class='bx bx-check text-primary'></i>
+                    <p class="text-xs self-start">Light switches wiped.</p>
+                </div>
+                <div class="flex flex-row gap-3">
+                    <i class='bx bx-check text-primary'></i>
+                    <p class="text-xs self-start">Garbage and recycling bins emptied.</p>
+                </div>
+                <div class="flex flex-row gap-3">
+                    <p class="text-xs self-start font-semibold my-2">Other Living areas:</p>
+                </div>
+                <div class="flex flex-row gap-3">
+                    <i class='bx bx-check text-primary'></i>
+                    <p class="text-xs self-start">All surfaces dusted.</p>
+                </div>
+                <div class="flex flex-row gap-3">
+                    <i class='bx bx-check text-primary'></i>
+                    <p class="text-xs self-start">Carpet and area rugs vacuumed.</p>
+                </div>
+                <div class="flex flex-row gap-3">
+                    <i class='bx bx-check text-primary'></i>
+                    <p class="text-xs self-start">Closet fronts and insides cleaned.</p>
+                </div>
+                <div class="flex flex-row gap-3">
+                    <i class='bx bx-check text-primary'></i>
+                    <p class="text-xs self-start">Hard surface floors vacuumed and damp-mopped.</p>
+                </div>
+                <div class="flex flex-row gap-3">
+                    <i class='bx bx-check text-primary'></i>
+                    <p class="text-xs self-start">Marks on walls and baseboards cleaned.</p>
+                </div>
+                <div class="flex flex-row gap-3">
+                    <i class='bx bx-check text-primary'></i>
+                    <p class="text-xs self-start">Mirrors cleaned.</p>
+                </div>
+                <div class="flex flex-row gap-3">
+                    <i class='bx bx-check text-primary'></i>
+                    <p class="text-xs self-start">Windowsills and window tracks cleaned (indoor).</p>
+                </div>
+                <div class="flex flex-row gap-3">
+                    <i class='bx bx-check text-primary'></i>
+                    <p class="text-xs self-start">Baseboards dusted and/or wiped.</p>
+                </div>
+                <div class="flex flex-row gap-3">
+                    <i class='bx bx-check text-primary'></i>
+                    <p class="text-xs self-start">Doorknobs, doorframes and doors cleaned.</p>
+                </div>
+                <div class="flex flex-row gap-3">
+                    <i class='bx bx-check text-primary'></i>
+                    <p class="text-xs self-start">Light switches wiped.</p>
+                </div>
+                <div class="flex flex-row gap-3 mb-6">
+                    <i class='bx bx-check text-primary'></i>
+                    <p class="text-xs self-start">Garbage and recycling bins emptied.</p>
+                </div>
+            </div>
+            <button class="absolute w-10 h-10 p-3 bg-white shadow-md rounded-full" style="bottom: -18px;" (click)="hideInformation('construction')">
+                <i class='bx bx-chevron-up'></i>
+            </button>
+        </ng-container>
+    </section>
+    <!-- commercial -->
+    <section class="w-[70%] h-auto bg-white p-2 rounded-md flex flex-col gap-3 justify-center items-center mb-2 relative">
+        <div class="w-full h-32">
+            <img class="w-full h-full object-cover object-top" src="../../../../../assets/commercial.jpg" alt="commercial">
+        </div>
+        <p class="w-full text-center font-bold text-primary">Commercial</p>
+        <button 
+        *ngIf="!commercialInfo"
+        class="bg-primary p-2 w-full text-white font-medium rounded-md text-sm" (click)="revealMoreInformation('commercial')">Learn More</button>
+        <ng-container *ngIf="commercialInfo">
+            <div class="flex flex-col w-full h-auto">
+                <div class="flex flex-row gap-3 mb-6">
+                    <i class='bx bx-check text-primary'></i>
+                    <p class="text-xs self-start">On Demand</p>
+                </div>
+                
+            </div>
+            <button class="absolute w-10 h-10 p-3 bg-white shadow-md rounded-full" style="bottom: -18px;" (click)="hideInformation('commercial')">
+                <i class='bx bx-chevron-up'></i>
+            </button>
+        </ng-container>
+    </section>
+</div>
