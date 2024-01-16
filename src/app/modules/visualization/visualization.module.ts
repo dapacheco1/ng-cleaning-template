@@ -13,6 +13,7 @@ import { ServiceGuaranteesComponent } from './components/service-guarantees/serv
 import { ReviewsComponent } from './components/reviews/reviews.component';
 import { ContactUsComponent } from './components/contact-us/contact-us.component';
 import { FooterComponent } from './components/footer/footer.component';
+import { CancellationPolicyComponent } from './components/cancellation-policy/cancellation-policy.component';
 
 @NgModule({
   declarations: [
@@ -25,7 +26,8 @@ import { FooterComponent } from './components/footer/footer.component';
     ServiceGuaranteesComponent,
     ReviewsComponent,
     ContactUsComponent,
-    FooterComponent
+    FooterComponent,
+    CancellationPolicyComponent
   ],
   imports: [
     CommonModule,

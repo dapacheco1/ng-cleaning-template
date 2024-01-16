@@ -6,4 +6,10 @@ import { Component } from '@angular/core';
 })
 export class NavbarComponent {
 
+  public scrollToAboutUs(){
+    const element = document.getElementById('about-us');
+    if(element){
+      element.scrollIntoView({behavior:'smooth'});
+    }
+  }
 }

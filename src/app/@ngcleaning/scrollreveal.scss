@@ -1,3 +1,15 @@
+.fade-up-hide{
+    opacity: 0;
+    filter:blur(0);
+    transform: translateY(100%);
+    transition: all 1s cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+.fade-up-show{
+    opacity: 0;
+    filter:blur(0);
+    transform: translateY(0);
+}
+
 .hide-x{
     opacity: 0;
     filter:blur(0);
