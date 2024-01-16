@@ -1,6 +1,6 @@
 <div class="mt-4 w-full flex flex-col gap-4">
-    <h2 class="text-2xl text-primary font-bold text-center w-full">See what our customers say about us</h2>
-    <section class="flex flex-col w-full items-center">
+    <h2 class="text-2xl text-primary font-bold text-center w-full fade-in-hide">See what our customers say about us</h2>
+    <section class="flex flex-col w-full items-center fade-in-hide">
         <h2 class="font-semibold">Top rated on Thumbtack</h2>
         <div class="flex flex-row gap-3 justify-center">
             <i class='bx bxs-star text-amber-400' ></i>
@@ -12,7 +12,7 @@
         <img class="w-1/4 my-2" src="../../../../../assets/thumbtack-logo-8D06EC40F6-seeklogo.com.png" alt="thumbtack logo">
         <p class="font-semibold">Based on 68 reviews</p>
     </section>
-    <div class="w-full flex flex-row gap-3 overflow-x-scroll overflow-y-hidden" style="scroll-snap-type: x mandatory;">
+    <div class="w-full flex flex-row gap-3 overflow-x-scroll overflow-y-hidden fade-in-hide" style="scroll-snap-type: x mandatory;">
         <ng-container *ngFor="let item of data">
             <div class="w-full h-44 bg-white rounded-md flex flex-col gap-3 snap-center p-3" style="flex: 0 0 310px">
                 <p class="max-h-28 overflow-hidden custom-ellipsis text-black-text text-md">{{item.comment}}</p>

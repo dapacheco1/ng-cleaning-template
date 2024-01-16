@@ -1,11 +1,11 @@
-import { Component } from '@angular/core';
+import { AfterViewInit, Component } from '@angular/core';
 
 @Component({
   selector: 'cleaning-our-services',
   templateUrl: './our-services.component.html',
   styleUrls: ['./our-services.component.scss']
 })
-export class OurServicesComponent {
+export class OurServicesComponent implements AfterViewInit{
 
   public regularInfo:boolean = false;
   public commercialInfo:boolean = false;
@@ -13,7 +13,25 @@ export class OurServicesComponent {
   public deepInfo:boolean = false;
   public moveInfo:boolean = false;
   public vacationInfo:boolean = false;
-
+  ngAfterViewInit(): void {
+    setTimeout(() => {
+      const observer = new IntersectionObserver(entries =>{
+        entries.forEach(entry => {
+          if(entry.isIntersecting){
+            entry.target.classList.add('show-x');
+            entry.target.classList.add('fade-in-show');
+          }else{
+            entry.target.classList.remove('show-x');
+            entry.target.classList.remove('fade-in-show');
+          }
+        });
+      });
+      const hideElements = document.querySelectorAll('.hide-x');
+      const hideFades = document.querySelectorAll('.fade-in-hide');
+      hideElements.forEach((el:any)=>observer.observe(el));
+      hideFades.forEach((el:any)=>observer.observe(el));
+    }, 0);
+  }
   public revealMoreInformation(param:string){
     switch(param){
       case 'regular':
