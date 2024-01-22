@@ -20,18 +20,20 @@ export class OurServicesComponent implements AfterViewInit{
           if(entry.isIntersecting){
             entry.target.classList.add('show-x');
             entry.target.classList.add('fade-in-show');
-            // entry.target.classList.add('hide-x-right');
+            entry.target.classList.add('show-x-right');
           }else{
             entry.target.classList.remove('show-x');
             entry.target.classList.remove('fade-in-show');
-            // entry.target.classList.remove('hide-x-right');
+            entry.target.classList.remove('show-x-right');
           }
         });
       });
       const hideElements = document.querySelectorAll('.hide-x');
       const hideFades = document.querySelectorAll('.fade-in-hide');
+      const hideFadesR = document.querySelectorAll('.hide-x-right');
       hideElements.forEach((el:any)=>observer.observe(el));
       hideFades.forEach((el:any)=>observer.observe(el));
+      hideFadesR.forEach((el:any)=>observer.observe(el));
     }, 0);
   }
   public revealMoreInformation(param:string){

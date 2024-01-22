@@ -22,7 +22,17 @@
     filter: blur(0);
     transform: translateX(0);
 }
+.hide-x-right{
+    opacity: 0;
+    filter:blur(0);
+    transform: translateX(100%);
+    transition: all 1s cubic-bezier(0.075, 0.82, 0.165, 1);
+}
 
+.show-x-right{
+    filter: blur(0);
+    transform: translateX(0);
+}
 .fade-in-hide{
     opacity: 0;
     filter:blur(0);

@@ -1,0 +1,193 @@
+<div class="flex flex-col">
+    <cleaning-navbar></cleaning-navbar>
+    <div class="w-full h-full flex flex-col items-center gap-4 p-9">
+        <h1 class="text-primary font-bold text-2xl">Quote with our Team</h1>
+        <p class="text-xl font-bold text-center">To request the service immediately, contact the following number
+            <a href="tel:(239)271-9367">(239) 271-9367</a>
+        </p>
+        <section class="w-full flex flex-col items-center">
+            <p class="text-base">Our attention schedules are: </p>
+            <p class="text-base">Monday to Saturday 9:00 am - 04:00 pm</p>
+            <p class="text-base">Sunday: closed</p>
+        </section>
+        <p>To request a quote, please fill our the following form.</p>
+        <div class="flex flex-col gap-2 w-full" [formGroup]="cleaningForm">
+            <h2 class="text-xl font-bold text-primary">Quote Form</h2>
+            <p class="font-semibold">Let us know about your contact details</p>
+            <div class="flex flex-col sm:flex-row gap-4 sm:gap-0 sm:flex-wrap w-full">
+                <div class="w-full sm:w-1/2 flex flex-col mt-3">
+                    <label for="firstname">FirstName</label>
+                   <mat-form-field class="w-full sm:w-1/2">
+                        <input matInput class="border border-gray-400 rounded-md w-1/2 p-1" type="text" name="firstname"  formControlName="firstName">
+                    </mat-form-field>
+                </div>
+                <div class="w-full sm:w-1/2 flex flex-col mt-3">
+                    <label for="lastname">LastName</label>
+                   <mat-form-field class="w-full sm:w-1/2">
+                        <input matInput class="border border-gray-400 rounded-md w-1/2 p-1" type="text" name="lastName" formControlName="lastName">
+                    </mat-form-field>
+                </div>
+                <div class="w-full sm:w-1/2 flex flex-col mt-3">
+                    <label for="org">Organization Name (Optional)</label>
+                   <mat-form-field class="w-full sm:w-1/2">
+                        <input matInput class="border border-gray-400 rounded-md w-1/2 p-1" type="text" name="org" formControlName="organization">
+                    </mat-form-field>
+                </div>
+                <div class="w-full sm:w-1/2 flex flex-col mt-3">
+                    <label for="email">Email Address</label>
+                   <mat-form-field class="w-full sm:w-1/2">
+                        <input matInput class="border border-gray-400 rounded-md w-1/2 p-1" type="email" name="email" formControlName="email">
+                    </mat-form-field>
+                </div>
+                <div class="w-full sm:w-1/2 flex flex-col mt-3">
+                    <label for="phone">Phone Number</label>
+                   <mat-form-field class="w-full sm:w-1/2">
+                        <input matInput min="0" class="border border-gray-400 rounded-md w-1/2 p-1" type="tel" name="phone" formControlName="phoneNumber">
+                    </mat-form-field>
+                </div>
+            </div>
+            <h2 class="font-bold mt-3">Address</h2>
+            <div class="flex flex-row gap-4 sm:gap-0 sm:flex-wrap">
+                <div class="w-full sm:w-1/2 flex flex-col mt-3">
+                    <label for="street1">Street 1</label>
+                   <mat-form-field class="w-full sm:w-1/2">
+                        <input matInput class="border border-gray-400 rounded-md w-1/2 p-1" type="text" name="street1" formControlName="street1">
+                    </mat-form-field>
+                </div>
+                <div class="w-full sm:w-1/2 flex flex-col mt-3">
+                    <label for="street2">Street 2</label>
+                   <mat-form-field class="w-full sm:w-1/2">
+                        <input matInput class="border border-gray-400 rounded-md w-1/2 p-1" type="text" name="street2" formControlName="street2">
+                    </mat-form-field>
+                </div>
+                <div class="w-full sm:w-1/2 flex flex-col mt-3">
+                    <label for="city">City</label>
+                   <mat-form-field class="w-full sm:w-1/2">
+                        <input matInput class="border border-gray-400 rounded-md w-1/2 p-1" type="text" name="city" formControlName="city">
+                    </mat-form-field>
+                </div>
+                <div class="w-full sm:w-1/2 flex flex-col mt-3">
+                    <label for="state">State</label>
+                   <mat-form-field class="w-full sm:w-1/2">
+                        <input matInput class="border border-gray-400 rounded-md w-1/2 p-1" type="text" name="state" formControlName="state">
+                    </mat-form-field>
+                </div>
+                <div class="w-full sm:w-1/2 flex flex-col mt-3">
+                    <label for="zip">ZIP Code</label>
+                   <mat-form-field class="w-full sm:w-1/2">
+                        <input matInput class="border border-gray-400 rounded-md w-1/2 p-1" type="text" name="zip" formControlName="zipCode">
+                    </mat-form-field>
+                </div>
+            </div>
+            <h2 class="text-xl text-primary font-bold mt-4">Service Preferences Details</h2>
+            <p>Select the service or services are you interested in:</p>
+            <div class="flex flex-row gap-4 sm:gap-0 sm:flex-wrap">
+                <div class="w-full sm:w-1/2 flex flex-col">
+                    <mat-checkbox [color]="'primary'">
+                        Regular Clean
+                    </mat-checkbox>
+                    <mat-checkbox [color]="'primary'">
+                        Deep Clean
+                    </mat-checkbox>
+                    <mat-checkbox [color]="'primary'">
+                        Move In/Out
+                    </mat-checkbox>
+                    <mat-checkbox [color]="'primary'">
+                        Vacation Home
+                    </mat-checkbox>
+                    <mat-checkbox [color]="'primary'">
+                        Post Construction
+                    </mat-checkbox>
+                    <mat-checkbox [color]="'primary'">
+                        Commercial
+                    </mat-checkbox>
+                </div>
+            </div>
+            <p>Select your property type:</p>
+            <div class="flex flex-row gap-4 sm:gap-0 sm:flex-wrap">
+                <div class="w-full sm:w-1/2 flex flex-col">
+                    <mat-checkbox [color]="'primary'">
+                        Apartment
+                    </mat-checkbox>
+                    <mat-checkbox [color]="'primary'">
+                        Home
+                    </mat-checkbox>
+                    <mat-checkbox [color]="'primary'">
+                        Condo
+                    </mat-checkbox>
+                    <mat-checkbox [color]="'primary'">
+                        Commercial/Office
+                    </mat-checkbox>
+                </div>
+            </div>
+            <div class="flex flex-row gap-4 sm:gap-0 sm:flex-wrap">
+                <div class="w-full sm:w-1/2 flex flex-col mt-3">
+                    <label for="footageprop" class="font-bold">Sq Footage of Property (ft <span class="text-xs" style="vertical-align: super;">2</span> )</label>
+                   <mat-form-field class="w-full sm:w-1/2">
+                        <input matInput class="border border-gray-400 rounded-md w-1/2 p-1" type="number" min="0" name="footageprop" formControlName="sqFootage">
+                    </mat-form-field>
+                </div>
+                <div class="w-full sm:w-1/2 flex flex-col mt-3">
+                    <label for="bedrooms" class="font-bold">How many bedrooms?</label>
+                   <mat-form-field class="w-full sm:w-1/2">
+                        <input matInput class="border border-gray-400 rounded-md w-1/2 p-1" type="number" min="0" name="bedrooms" formControlName="bedrooms">
+                    </mat-form-field>
+                </div>
+                <div class="w-full sm:w-1/2 flex flex-col mt-3">
+                    <label for="bathrooms" class="font-bold">How many Bathrooms?</label>
+                   <mat-form-field class="w-full sm:w-1/2">
+                        <input matInput class="border border-gray-400 rounded-md w-1/2 p-1" type="number" min="0" name="bathrooms" formControlName="bathrooms">
+                    </mat-form-field>
+                </div>
+                <div class="w-full sm:w-1/2 flex flex-col mt-3">
+                    <label for="offices" class="font-bold">How many Offices?</label>
+                   <mat-form-field class="w-full sm:w-1/2">
+                        <input matInput class="border border-gray-400 rounded-md w-1/2 p-1" type="number" min="0" name="offices" formControlName="offices">
+                    </mat-form-field>
+                </div>
+            </div>
+            <h2 class="text-xl text-primary font-bold mt-4">Let us check your availability</h2>
+            <div class="flex flex-col gap-4">
+                <div class="w-full flex flex-col">
+                    <label for="date">Which day would be best schedule the clean?</label>
+                    <div class="flex flex-row">
+                        <input class="border border-gray-400 rounded-md w-1/2 p-1" matInput [matDatepicker]="picker">
+                        <mat-datepicker-toggle matIconSuffix [for]="picker"></mat-datepicker-toggle>
+                        <mat-datepicker #picker></mat-datepicker>
+                    </div>
+                </div>
+                <div class="w-full flex flex-col">
+                    <label for="date">What is another day that works for you?</label>
+                    <div class="flex flex-row">
+                        <input class="border border-gray-400 rounded-md w-1/2 p-1" matInput [matDatepicker]="picker2">
+                        <mat-datepicker-toggle matIconSuffix [for]="picker2"></mat-datepicker-toggle>
+                        <mat-datepicker #picker2></mat-datepicker>
+                    </div>
+                </div>
+                <div class="w-full flex flex-col">
+                    <label for="date">What are your preferred arrival times?</label>
+                    <mat-checkbox [color]="'primary'">
+                        07:00 am - 09:00 am
+                    </mat-checkbox>
+                    <mat-checkbox [color]="'primary'">
+                        09:00 am - 11:00 am
+                    </mat-checkbox>
+                    <mat-checkbox [color]="'primary'">
+                        11:00 am - 01:00 pm
+                    </mat-checkbox>
+                    <mat-checkbox [color]="'primary'">
+                        02:00 pm - 04:00 pm
+                    </mat-checkbox>
+                    <mat-checkbox [color]="'primary'">
+                        Before Business Hours (Commercial)
+                    </mat-checkbox>
+                    <mat-checkbox [color]="'primary'">
+                        After Business Hours (Commercial)
+                    </mat-checkbox>
+                </div>
+                <button class="self-end bg-primary text-white font-semibold p-3 rounded-md">Submit</button>
+            </div>
+        </div>
+    </div>
+    <!-- <cleaning-footer></cleaning-footer> -->
+</div>

@@ -1,14 +1,24 @@
-import { Component, ElementRef, Renderer2 } from '@angular/core';
+import { AfterViewInit, Component, ElementRef, Renderer2, ViewChild } from '@angular/core';
 
 @Component({
   selector: 'app-visualization',
   templateUrl: './visualization.component.html',
   styleUrls: ['./visualization.component.scss']
 })
-export class VisualizationComponent {
+export class VisualizationComponent implements AfterViewInit{
   public showButton: boolean = false;
-  
   constructor() { }
+  ngAfterViewInit(): void {
+    setTimeout(() => {
+      try{
+          const video = document.getElementById("videoPlayer") as HTMLVideoElement;
+          video.muted = true;
+          video.play();
+        }catch(err){
+          console.log(err);
+        }
+    }, 300);
+  }
   public detectScroll(event:any){
     const element = document.getElementById('navbar'); // Get the native element
     if(element){

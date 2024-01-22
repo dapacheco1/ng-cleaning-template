@@ -14,7 +14,13 @@ import { ReviewsComponent } from './components/reviews/reviews.component';
 import { ContactUsComponent } from './components/contact-us/contact-us.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { CancellationPolicyComponent } from './components/cancellation-policy/cancellation-policy.component';
-
+import { QuoteFormComponent } from './components/quote-form/quote-form.component';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import {MatCheckboxModule} from '@angular/material/checkbox';
+import {MatDatepickerModule} from '@angular/material/datepicker';
+import { MatNativeDateModule } from '@angular/material/core';
+import {MatFormFieldModule} from '@angular/material/form-field';
+import { MatInputModule } from '@angular/material/input';
 @NgModule({
   declarations: [
     VisualizationComponent,
@@ -27,12 +33,21 @@ import { CancellationPolicyComponent } from './components/cancellation-policy/ca
     ReviewsComponent,
     ContactUsComponent,
     FooterComponent,
-    CancellationPolicyComponent
+    CancellationPolicyComponent,
+    QuoteFormComponent,
+
   ],
   imports: [
     CommonModule,
     VisualizationRoutingModule,
     CdkMenuModule,
+    FormsModule,
+    ReactiveFormsModule,
+    MatCheckboxModule,
+    MatDatepickerModule,
+    MatNativeDateModule,
+    MatFormFieldModule,
+    MatInputModule,
   ]
 })
 export class VisualizationModule { }
