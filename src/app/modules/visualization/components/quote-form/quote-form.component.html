@@ -83,41 +83,21 @@
             <p>Select the service or services are you interested in:</p>
             <div class="flex flex-row gap-4 sm:gap-0 sm:flex-wrap">
                 <div class="w-full sm:w-1/2 flex flex-col">
-                    <mat-checkbox [color]="'primary'">
-                        Regular Clean
-                    </mat-checkbox>
-                    <mat-checkbox [color]="'primary'">
-                        Deep Clean
-                    </mat-checkbox>
-                    <mat-checkbox [color]="'primary'">
-                        Move In/Out
-                    </mat-checkbox>
-                    <mat-checkbox [color]="'primary'">
-                        Vacation Home
-                    </mat-checkbox>
-                    <mat-checkbox [color]="'primary'">
-                        Post Construction
-                    </mat-checkbox>
-                    <mat-checkbox [color]="'primary'">
-                        Commercial
-                    </mat-checkbox>
+                    <ng-container *ngFor="let srv of services">
+                        <mat-checkbox [color]="'primary'" [(ngModel)]="srv.isSelected" [ngModelOptions]="{standalone: true}">
+                            {{srv.service}}
+                        </mat-checkbox>
+                    </ng-container>
                 </div>
             </div>
             <p>Select your property type:</p>
             <div class="flex flex-row gap-4 sm:gap-0 sm:flex-wrap">
                 <div class="w-full sm:w-1/2 flex flex-col">
-                    <mat-checkbox [color]="'primary'">
-                        Apartment
-                    </mat-checkbox>
-                    <mat-checkbox [color]="'primary'">
-                        Home
-                    </mat-checkbox>
-                    <mat-checkbox [color]="'primary'">
-                        Condo
-                    </mat-checkbox>
-                    <mat-checkbox [color]="'primary'">
-                        Commercial/Office
-                    </mat-checkbox>
+                    <ng-container *ngFor="let prop of propertiesList">
+                        <mat-checkbox [color]="'primary'" [(ngModel)]="prop.isSelected" [ngModelOptions]="{standalone: true}">
+                            {{prop.propertiesType}}
+                        </mat-checkbox>
+                    </ng-container>
                 </div>
             </div>
             <div class="flex flex-col sm:flex-row gap-4 sm:gap-0 sm:flex-wrap">
@@ -148,42 +128,27 @@
             </div>
             <h2 class="text-xl text-primary font-bold mt-4">Let us check your availability</h2>
             <div class="flex flex-col gap-4">
-                <div class="w-full flex flex-col">
                     <label for="date">Which day would be best schedule the clean?</label>
-                    <div class="flex flex-row">
-                        <input class="border border-gray-400 rounded-md w-1/2 p-1" matInput [matDatepicker]="picker">
+                    <mat-form-field class="w-full sm:w-1/2 h-[80px]">
+                        <input class="!py-5 !px-5"  matInput [matDatepicker]="picker">
                         <mat-datepicker-toggle matIconSuffix [for]="picker"></mat-datepicker-toggle>
                         <mat-datepicker #picker></mat-datepicker>
-                    </div>
-                </div>
+                    </mat-form-field>
                 <div class="w-full flex flex-col">
                     <label for="date">What is another day that works for you?</label>
-                    <div class="flex flex-row">
-                        <input class="border border-gray-400 rounded-md w-1/2 p-1" matInput [matDatepicker]="picker2">
+                    <mat-form-field class="w-full sm:w-1/2 h-[80px]">
+                        <input class="!py-5 !px-5" matInput [matDatepicker]="picker2">
                         <mat-datepicker-toggle matIconSuffix [for]="picker2"></mat-datepicker-toggle>
                         <mat-datepicker #picker2></mat-datepicker>
-                    </div>
+                    </mat-form-field>
                 </div>
                 <div class="w-full flex flex-col">
                     <label for="date">What are your preferred arrival times?</label>
-                    <mat-checkbox [color]="'primary'">
-                        07:00 am - 09:00 am
-                    </mat-checkbox>
-                    <mat-checkbox [color]="'primary'">
-                        09:00 am - 11:00 am
-                    </mat-checkbox>
-                    <mat-checkbox [color]="'primary'">
-                        11:00 am - 01:00 pm
-                    </mat-checkbox>
-                    <mat-checkbox [color]="'primary'">
-                        02:00 pm - 04:00 pm
-                    </mat-checkbox>
-                    <mat-checkbox [color]="'primary'">
-                        Before Business Hours (Commercial)
-                    </mat-checkbox>
-                    <mat-checkbox [color]="'primary'">
-                        After Business Hours (Commercial)
-                    </mat-checkbox>
+                    <ng-container *ngFor="let time of arrivalTimesList">
+                        <mat-checkbox [color]="'primary'"  [(ngModel)]="time.isSelected" [ngModelOptions]="{standalone: true}">
+                            {{time.arrival}}
+                        </mat-checkbox>
+                    </ng-container>
                 </div>
                 <button class="self-end bg-primary text-white font-semibold p-3 rounded-md" (click)="sendRequest()">Submit</button>
             </div>

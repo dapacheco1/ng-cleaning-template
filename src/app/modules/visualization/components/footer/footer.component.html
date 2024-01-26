@@ -1,13 +1,17 @@
-<footer class="bg-white text-black my-20 relative">
+<footer class="bg-white text-black my-20 sm:my-0 relative">
     <div _ngcontent-ng-c4085139727="" class="w-full h-2 bg-primary z-10">&nbsp;</div>
     <br>
     <div class="container mx-auto px-6">
         <div class="flex flex-wrap justify-between">
             <div class="w-full md:w-1/4 text-center md:text-left">
                 <h5 class="text-xl font-bold border-b-4 border-primary inline-block pb-2">Institutional</h5>
-                <p class="py-4 text-gray-800">
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                </p>
+                <div class="py-2 flex flex-col text-gray-800 gap-4">
+                    <a href="">Home</a>
+                    <a href="">About Us</a>
+                    <a href="">Contact Us</a>
+                    <a href="">Guarantee</a>
+                    <a routerLink="/cancellation-policy" target="_blank">Cancellation Policy</a>
+                </div>
             </div>
             <div class="w-full md:w-1/4 text-center md:text-left">
                 <h5 class="text-xl font-bold border-b-4 border-primary inline-block pb-2">Services</h5>
@@ -22,36 +26,34 @@
             </div>
             <div class="w-full md:w-1/4 text-center md:text-left">
                 <h5 class="text-xl font-bold border-b-4 border-primary inline-block pb-2">Follow Us</h5>
-                <ul class="list-reset items-center text-gray-800">
+                <ul class="list-reset items-center text-gray-800  flex justify-center sm:justify-start sm:flex-row gap-4">
                     <li class="py-2">
                         <a href="https://www.instagram.com/marxs.services/" target="_blank"
                             class="text-gray-800 hover:text-gray-700"><img class="w-[32px] inline-block"
                                 src="../../../../../assets/icons/ig-icon.svg" alt="instagram icon"></a>
-                    </li>
-                </ul>
-                <ul class="list-reset items-center text-gray-800">
-                    <li class="py-2">
-                        <a href="https://www.facebook.com/marxs.services" target="_blank"
-                            class="text-gray-800 hover:text-gray-700"><img class="w-[30px] inline-block"
-                                src="../../../../../assets/icons/fb-icon.svg" alt="facebook icon"></a>
+                                <li class="py-2">
+                                    <a href="https://www.facebook.com/marxs.services" target="_blank"
+                                        class="text-gray-800 hover:text-gray-700"><img class="w-[30px] inline-block"
+                                            src="../../../../../assets/icons/fb-icon.svg" alt="facebook icon"></a>
                     </li>
                 </ul>
             </div>
 
             <div class="w-full md:w-1/4 text-center md:text-left">
                 <h5 class="text-xl font-bold border-b-4 border-primary inline-block pb-2">Contact Us</h5>
-                <ul class="list-reset items-center text-gray-800">
-                    <li class="py-2">
+                <ul class="list-reset items-center text-gray-800 w-full">
+                    <li class="py-2 flex flex-row gap-3">
                         <a href="tel:(239)271-9367" class="text-gray-800 hover:text-gray-700"><img
                                 class="w-[22px] inline-block" src="../../../../../assets/icons/phone-icon.svg"
                                 alt="phone icon"></a>
                         (239) 271-9367
                     </li>
-                    <li class="py-2">
-                        <a href="mailto:management@marxscleaning.com" class="text-gray-800 hover:text-gray-700"><img
-                                class="w-[24px] inline-block" src="../../../../../assets/icons/mail-icon.svg"
-                                alt="email icon"></a>
-                        management@marxscleaning.com
+                    <li class="py-2 flex flex-row gap-3">
+                        <img
+                        class="w-[24px] inline-block" src="../../../../../assets/icons/mail-icon.svg"
+                        alt="email icon">
+                        <a href="mailto:management@marxscleaning.com" class="text-gray-800 hover:text-gray-700">
+                        management@marxscleaning.com </a>
                     </li>
                 </ul>
             </div>
