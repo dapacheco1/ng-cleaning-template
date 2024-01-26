@@ -21,7 +21,6 @@ import {MatDatepickerModule} from '@angular/material/datepicker';
 import { MatNativeDateModule } from '@angular/material/core';
 import {MatFormFieldModule} from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material/input';
-import {HttpClientModule} from '@angular/common/http';
 @NgModule({
   declarations: [
     VisualizationComponent,
@@ -49,7 +48,6 @@ import {HttpClientModule} from '@angular/common/http';
     MatNativeDateModule,
     MatFormFieldModule,
     MatInputModule,
-    HttpClientModule,
   ]
 })
 export class VisualizationModule { }
