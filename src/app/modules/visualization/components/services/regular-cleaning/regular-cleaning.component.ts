@@ -7,6 +7,7 @@ import { AfterViewInit, Component } from '@angular/core';
 })
 export class RegularCleaningComponent implements AfterViewInit{
   public showButton: boolean = false;
+  public panelOpenState = false;
   ngAfterViewInit(): void {
     setTimeout(() => {
       try{

@@ -2,30 +2,233 @@
     <cleaning-navbar class=" bg-white"></cleaning-navbar>
     <div class="w-full h-2 bg-primary z-10">&nbsp;</div>
     <div class="w-full h-auto relative">
-        <video id="videoPlayer" autoplay="true"
-        muted="true" loop="true" class="-z-10 w-screen object-cover absolute h-[360px] opacity-45">
-            <source src="../../../assets/video-mobile.mp4" type="video/mp4">
+        <video id="videoPlayer" autoplay="true" muted="true" loop="true"
+            class="-z-10 w-screen object-cover absolute h-[360px] opacity-45">
+            <source src="assets/video-mobile.mp4" type="video/mp4">
         </video>
         <cleaning-introduction></cleaning-introduction>
     </div>
-    <main class="w-full  pt-2 flex flex-col sm:gap-3">
-       
-       <div class="w-full h-2 bg-primary z-10 mt-8 my-2">&nbsp;</div>
-       <img class="w-[27%] h-[35%] sm:w-[10%] sm:h-[10%] md:w-[5%] md:h-[5%] object-contain m-auto" src="../../../assets/LOGO 1.png" alt="marxs cleaning logo">
-       <cleaning-contact-us></cleaning-contact-us>
-       <!-- <div class="w-1/2 self-center h-0.5 bg-primary z-10 my-8">&nbsp;</div> -->
-       <cleaning-footer></cleaning-footer>
+    <main class="w-full  pt-20 flex flex-col sm:gap-3">
+        <!--  here content -->
+        <div class="w-full px-2 sm:px-10 flex flex-col gap-4">
+            <div class="flex flex-col sm:flex-row sm:items-center gap-5 sm:gap-6">
+                <img src="assets/services/REGULAR CLEANING.jpg" class="w-full sm:w-1/3" alt="regular cleaning">
+                <section class="w-full sm:w-2/3 text-base sm:text-lg">
+                    <h2 class="text-primary text-3xl font-bold text-center pb-6">Regular Cleaning</h2>
+                    <p>Life's demanding, and a clean home shouldn't add to the stress. At Marx's Cleaning, we offer
+                        solutions that fit your lifestyle. Choose our Regular Cleaning service for ongoing maintenance,
+                        or opt for our One-Time Cleaning for that special refresh.
+                        Our dedicated cleaning experts at Marx's Cleaning are committed to transforming your home into a
+                        haven of cleanliness. Whether it's a weekly refresh, bi-weekly, or monthly maintenance, we've
+                        got you covered.
+                        Imagine coming home to a spotless environment, free of the stress of untidiness. With Marx's
+                        Cleaning, you can reclaim your time and enjoy the benefits of a consistently clean and inviting
+                        home.
+                        Let us handle the cleaning, so you can focus on what matters most to you. Ready to experience
+                        the joy of a perpetually clean home?
+                    </p>
+                </section>
+            </div>
+            <section class="w-full flex flex-col items-center gap-4 mt-4">
+                <h2 class="text-primary text-3xl font-bold">Profits</h2>
+                <div class="flex flex-row  flex-wrap justify-center">
+                    <div class="w-full sm:w-1/3 flex flex-col items-center p-6 shadow-md rounded-md">
+                        <p class="font-semibold text-primary text-xl">Premium Tools for Outstanding Results</p>
+                        <p>Our service goes beyond cleaning; it's about excellence. We utilize top-tier products and tools, ensuring your home remains consistently clean and flawless.</p>
+                    </div>
+                    <div class="w-full sm:w-1/3 flex flex-col items-center p-6 shadow-md rounded-md">
+                        <p class="font-semibold text-primary text-xl">Healthier Living Environment</p>
+                        <p>Enjoy a healthier environment for you and your family. Our services not only maintain visible cleanliness but also contribute to indoor air quality, removing allergens and fostering a healthier space to live.
+                        </p>
+                    </div>
+                    <div class="w-full sm:w-1/3 flex flex-col items-center p-6 shadow-md rounded-md">
+                        <p class="font-semibold text-primary text-xl">Peace of Mind</p>
+                        <p>Leave cleaning worries behind. With dedicated professionals caring for your space, you gain peace of mind, knowing that your environment is in good hands and will be kept in excellent condition.
+                        </p>
+                    </div>
+                    <div class="w-full sm:w-1/3 flex flex-col items-center p-6 shadow-md rounded-md">
+                        <p class="font-semibold text-primary text-xl">Time Reclamation</p>
+                        <p>Experience the freedom to devote more time to the things that truly matter. By entrusting the cleaning to us, you regain precious hours that can be spent more meaningfully.
+                        </p>
+                    </div>
+                </div>
+            </section>
+            <section class="w-full flex flex-col items-center gap-4 mt-4">
+                <h2 class="text-primary text-3xl font-bold">Explore the details of our regular cleaning service</h2>
+                <mat-accordion class="w-full sm:w-1/2">
+                    <mat-expansion-panel (opened)="panelOpenState = true" (closed)="panelOpenState = false">
+                        <mat-expansion-panel-header>
+                            <mat-panel-title class="font-bold text-primary">
+                                General Cleaning
+                            </mat-panel-title>
+                        </mat-expansion-panel-header>
+                        <div class="flex flex-row gap-3">
+                            <i class='bx bx-check text-primary'></i>
+                            <p class="text-md">Clean all rooms.</p>
+                        </div>
+                        <div class="flex flex-row gap-3">
+                            <i class='bx bx-check text-primary'></i>
+                            <p class="text-md">Dusting.</p>
+                        </div>
+                        <div class="flex flex-row gap-3">
+                            <i class='bx bx-check text-primary'></i>
+                            <p class="text-md">Bed Made.</p>
+                        </div>
+                        <div class="flex flex-row gap-3">
+                            <i class='bx bx-check text-primary'></i>
+                            <p class="text-md">Remove Trash.</p>
+                        </div>
+                        <div class="flex flex-row gap-3">
+                            <i class='bx bx-check text-primary'></i>
+                            <p class="text-md">Clean windowsills.</p>
+                        </div>
+                        <div class="flex flex-row gap-3">
+                            <i class='bx bx-check text-primary'></i>
+                            <p class="text-md">Mirrors cleaning.</p>
+                        </div>
+                        <div class="flex flex-row gap-3">
+                            <i class='bx bx-check text-primary'></i>
+                            <p class="text-md">Clean microwave.</p>
+                        </div>
+                        <div class="flex flex-row gap-3">
+                            <i class='bx bx-check text-primary'></i>
+                            <p class="text-md">Clean stove.</p>
+                        </div>
+                        <div class="flex flex-row gap-3">
+                            <i class='bx bx-check text-primary'></i>
+                            <p class="text-md">Bathtub.</p>
+                        </div>
+                        <div class="flex flex-row gap-3">
+                            <i class='bx bx-check text-primary'></i>
+                            <p class="text-md">Washed bathroom glass.</p>
+                        </div>
+                        <div class="flex flex-row gap-3">
+                            <i class='bx bx-check text-primary'></i>
+                            <p class="text-md">Floor and Carpet Care</p>
+                        </div>
+                        <div class="flex flex-row gap-3">
+                            <i class='bx bx-check text-primary'></i>
+                            <p class="text-md">Vacuum carpets, rugs and floor.</p>
+                        </div>
+                        <div class="flex flex-row gap-3">
+                            <i class='bx bx-check text-primary'></i>
+                            <p class="text-md">Mop all floor types.</p>
+                        </div>      
+                    </mat-expansion-panel>
+                    <mat-expansion-panel (opened)="panelOpenState = true" (closed)="panelOpenState = false">
+                        <mat-expansion-panel-header>
+                            <mat-panel-title class="font-bold text-primary">
+                                Stainless Steel Maintenance
+                            </mat-panel-title>
+                        </mat-expansion-panel-header>
+                        <div class="flex flex-row gap-3 mb-6">
+                            <i class='bx bx-check text-primary'></i>
+                            <p class="text-md">Condition stainless steel.</p>
+                        </div>
+                    </mat-expansion-panel>
+                </mat-accordion>
+            </section>
+            <section class="w-full flex flex-col items-center gap-4 mt-4">
+                <h2 class="text-primary text-3xl font-bold">FAQ</h2>
+                <mat-accordion class="w-full sm:w-1/2">
+                    <mat-expansion-panel (opened)="panelOpenState = true" (closed)="panelOpenState = false">
+                        <mat-expansion-panel-header>
+                            <mat-panel-title class="font-bold text-primary">
+                                Why do i need deep cleaning before regular cleaning?
+                            </mat-panel-title>
+                        </mat-expansion-panel-header>
+                        <div>
+                            <p>Deep cleaning is crucial prior to regular maintenance for several reasons:</p>
+                            <ul>
+                                <li>
+                                    <p class="font-semibold">Elimination of Dirt and Accumulated Residues</p>
+                                    <p>
+                                        Deep cleaning involves the thorough removal of dirt and accumulated residues, promoting a healthier and cleaner home. While regular cleaning aids in maintaining cleanliness, the removal of ingrained dirt is essential for ensuring efficient regular cleaning.
+                                    </p>
+                                </li>
+                                <li>
+                                    <p class="font-semibold">Addressing Hard-to-Reach Areas</p>
+                                    <p>
+                                        In the process of deep cleaning, overlooked areas - such as behind furniture, inside cabinets, the oven, refrigerator, and other challenging surfaces - are meticulously cleaned. Regular cleaning might miss these areas, but deep cleaning guarantees their thorough attention.
+                                    </p>
+                                </li>
+                                <li>
+                                    <p class="font-semibold">Optimizing Efficiency for Regular Cleaning</p>
+                                    <p>
+                                        Deep cleaning serves as a preparation phase, enhancing the efficiency and effectiveness of regular maintenance. By eliminating dirt and debris during deep cleaning, the subsequent regular cleaning becomes more manageable, saving time and effort.
+In essence, deep cleaning is pivotal for removing dirt and debris, cleaning hard-to-reach areas, and priming your home for efficient regular cleaning.
+                                    </p>
+                                </li>
+                            </ul>
+                        </div> 
+                    </mat-expansion-panel>
+                    <mat-expansion-panel (opened)="panelOpenState = true" (closed)="panelOpenState = false">
+                        <mat-expansion-panel-header>
+                            <mat-panel-title class="font-bold text-primary">
+                                Do i need to have my own cleaning equipment and materials?
+                            </mat-panel-title>
+                        </mat-expansion-panel-header>
+                        <p>No. Our cleaners have their own equipment and products to clean your home. In case you have any preference regarding cleaning products, feel free to inform us and we will do our best to meet your needs.</p>
+                    </mat-expansion-panel>
+                    <mat-expansion-panel (opened)="panelOpenState = true" (closed)="panelOpenState = false">
+                        <mat-expansion-panel-header>
+                            <mat-panel-title class="font-bold text-primary">
+                                How often should I regularly clean my home?
+                            </mat-panel-title>
+                        </mat-expansion-panel-header>
+                        <p>The ideal frequency for regular cleaning depends on the specific needs of each environment and the lifestyle of the people inhabiting the space. Some areas may require more frequent cleaning, while others may need less.
+                            If you're considering efficient and professional cleaning services, you can discuss with Marx's Cleaning the ideal frequency for cleaning according to the specific needs of your environments and your preferences for an effective clean. 
+                            </p>
+                    </mat-expansion-panel>
+                    <mat-expansion-panel (opened)="panelOpenState = true" (closed)="panelOpenState = false">
+                        <mat-expansion-panel-header>
+                            <mat-panel-title class="font-bold text-primary">
+                                Do you offer a satisfaction guarantee for regular cleaning?
+                            </mat-panel-title>
+                        </mat-expansion-panel-header>
+                        <p>If you are unsatisfied with our regular cleaning, please contact our office within 24 hours. We uphold a 100% satisfaction policy and are committed to promptly addressing any concerns. We will gladly return to clean your space again at no extra cost, ensuring you're content with the results.
+                            </p>
+                    </mat-expansion-panel>
+                    <mat-expansion-panel (opened)="panelOpenState = true" (closed)="panelOpenState = false">
+                        <mat-expansion-panel-header>
+                            <mat-panel-title class="font-bold text-primary">
+                                What payment methods are accepted?
+                            </mat-panel-title>
+                        </mat-expansion-panel-header>
+                        <p>We accept payments in cash, check, or through the Zelle service upon completion of the job. We provide flexibility for clients to choose the most convenient payment method for them. Payment can be made as soon as the work is finished, ensuring a smooth and hassle-free transaction.
+                            </p>
+                    </mat-expansion-panel>
+                    <mat-expansion-panel (opened)="panelOpenState = true" (closed)="panelOpenState = false">
+                        <mat-expansion-panel-header>
+                            <mat-panel-title class="font-bold text-primary">
+                                What is Marx's Cleaning cancellation policy?
+                            </mat-panel-title>
+                        </mat-expansion-panel-header>
+                        <p>Our cancellation policy is designed to keep our cleaning teams busy, ensuring consistent and high-quality service. We understand that unforeseen circumstances can arise, such as sudden illnesses or family emergencies. However, we kindly request that you inform us with at least 24 hours' notice if you need to cancel. If the cancellation occurs without a 24-hour notice, we reserve the right to apply a $50 cancellation fee. This fee may also be applied in cases of cancellation due to reasons such as difficulty accessing the property, payment failure, lack of water, lack of electricity, or air conditioning failure - especially during the summer months. We are always committed to finding creative solutions to overcome challenges, but if we encounter difficulties or cannot reach the homeowner for assistance, the cancellation fee may be applied. We appreciate your understanding and cooperation with our late cancellation policy.
+                            </p>
+                    </mat-expansion-panel>
+                </mat-accordion>
+            </section>
+        </div>
+        <div class="w-full h-2 bg-primary z-10 mt-8 my-2">&nbsp;</div>
+        <img class="w-[27%] h-[35%] sm:w-[10%] sm:h-[10%] md:w-[5%] md:h-[5%] object-contain m-auto"
+            src="assets/LOGO 1.png" alt="marxs cleaning logo">
+        <cleaning-contact-us></cleaning-contact-us>
+        <cleaning-footer></cleaning-footer>
     </main>
     <section *ngIf="!showButton" class="fixed bottom-0  bg-primary px-4 py-2 w-full h-auto block sm:hidden">
         <div class="flex flex-row">
-            <a href="tel:tel:(239)271-9367" class="w-1/3 flex flex-col gap-2 items-center"><i class='bx bx-phone text-2xl text-white'></i>
-            <p class="text-md text-white font-semibold">CALL</p>
+            <a href="tel:tel:(239)271-9367" class="w-1/3 flex flex-col gap-2 items-center"><i
+                    class='bx bx-phone text-2xl text-white'></i>
+                <p class="text-md text-white font-semibold">CALL</p>
             </a>
-            <button class="w-1/3 flex flex-col gap-2 items-center"><i class='bx bxs-calendar-star text-2xl text-white'></i>
-            <p class="text-md text-white font-semibold">SCHEDULE</p>
+            <button class="w-1/3 flex flex-col gap-2 items-center"><i
+                    class='bx bxs-calendar-star text-2xl text-white'></i>
+                <p class="text-md text-white font-semibold">SCHEDULE</p>
             </button>
-            <a href="sms:+593979379671?body=Hello%20there!" class="w-1/3 flex flex-col gap-2 items-center"><i class='bx bx-message-dots text-2xl text-white'></i>
-            <p class="text-md text-white font-semibold">SMS</p>
+            <a href="sms:+593979379671?body=Hello%20there!" class="w-1/3 flex flex-col gap-2 items-center"><i
+                    class='bx bx-message-dots text-2xl text-white'></i>
+                <p class="text-md text-white font-semibold">SMS</p>
             </a>
         </div>
     </section>
