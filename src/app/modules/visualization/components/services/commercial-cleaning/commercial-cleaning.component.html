@@ -1,0 +1,32 @@
+<div id="font-montserrat" class="w-screen  flex flex-col overflow-auto" (scroll)="detectScroll($event)">
+    <cleaning-navbar class=" bg-white"></cleaning-navbar>
+    <div class="w-full h-2 bg-primary z-10">&nbsp;</div>
+    <div class="w-full h-auto relative">
+        <video id="videoPlayer" autoplay="true"
+        muted="true" loop="true" class="-z-10 w-screen object-cover absolute h-[360px] opacity-45">
+            <source src="../../../assets/video-mobile.mp4" type="video/mp4">
+        </video>
+        <cleaning-introduction></cleaning-introduction>
+    </div>
+    <main class="w-full  pt-2 flex flex-col sm:gap-3">
+       
+       <div class="w-full h-2 bg-primary z-10 mt-8 my-2">&nbsp;</div>
+       <img class="w-[27%] h-[35%] sm:w-[10%] sm:h-[10%] md:w-[5%] md:h-[5%] object-contain m-auto" src="../../../assets/LOGO 1.png" alt="marxs cleaning logo">
+       <cleaning-contact-us></cleaning-contact-us>
+       <!-- <div class="w-1/2 self-center h-0.5 bg-primary z-10 my-8">&nbsp;</div> -->
+       <cleaning-footer></cleaning-footer>
+    </main>
+    <section *ngIf="!showButton" class="fixed bottom-0  bg-primary px-4 py-2 w-full h-auto block sm:hidden">
+        <div class="flex flex-row">
+            <a href="tel:tel:(239)271-9367" class="w-1/3 flex flex-col gap-2 items-center"><i class='bx bx-phone text-2xl text-white'></i>
+            <p class="text-md text-white font-semibold">CALL</p>
+            </a>
+            <button class="w-1/3 flex flex-col gap-2 items-center"><i class='bx bxs-calendar-star text-2xl text-white'></i>
+            <p class="text-md text-white font-semibold">SCHEDULE</p>
+            </button>
+            <a href="sms:+593979379671?body=Hello%20there!" class="w-1/3 flex flex-col gap-2 items-center"><i class='bx bx-message-dots text-2xl text-white'></i>
+            <p class="text-md text-white font-semibold">SMS</p>
+            </a>
+        </div>
+    </section>
+</div>
